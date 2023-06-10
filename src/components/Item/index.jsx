@@ -1,15 +1,17 @@
 import './item.css';
 
-import React from 'react';
+import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
 
-const Item = ({info}) => {
+const Item = ({ info }) => {
+
     return (
-        <a className="film">
-        <img src={info.image} alt="" />
-        <p>{info.title}</p>
+        <Link to={`/detalle/${info.id}`} className="film">
+            <img src={info.image} alt="" />
+            <p>{info.title}</p>
 
-        </a>
-    )
+        </Link>
+    );
 }
 
 export default Item;

@@ -1,26 +1,32 @@
 import React, { useState, useEffect } from  "react";
 
 import ItemDetail from "../ItemDetail";
+import { useParams } from "react-router-dom"; 
 
 
-const film = { id: 1, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Escudo_del_C_A_River_Plate.svg/800px-Escudo_del_C_A_River_Plate.svg.png", title: "Riverescudo" };
+const films = [
+    { id: 1, image: "https://lacamisetanosemancha.blogspot.com/2012/07/river-plate-1986.html?m=0", category: 'films', title: "River1986" },
+    {id: 2, image: "https://lacamisetanosemancha.blogspot.com/2012/07/river-plate-1986.html?m=0", category: 'films', title: "River1996"},
+    {id: 3, image: "https://lacamisetanosemancha.blogspot.com/2012/07/river-plate-1986.html?m=0", category: 'films', title: "River00"},
+];
 
 export const ItemDetailContainer = () => {
     const [data, setData] = useState({});
+    const { detalleId} = useParams();
 
     useEffect(() => {
         const getData = new Promise(resolve => {
             setTimeout(() => {
-                resolve(film);
+                resolve(films);
         }, 3000);
     });
 
-    getData.then(res => setData(res));
+    getData.then(res => setData(res.find(film => film.id === parseInt(detalleId))));
 }, [])
 
-    return(
+    return (
         <ItemDetail data={data} />
     );
-}
+};
 
 export default ItemDetailContainer;
