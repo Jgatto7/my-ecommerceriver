@@ -32,7 +32,7 @@ const Cart = () => {
 	if (cart.length === 0) {
 		return (
 			<>
-				<p>No hay elementos en el carrito</p>
+				<p className="SinElementos">No hay elementos en el carrito</p>
 				<Link to="/">Hacer compras</Link>
 			</>
 		);

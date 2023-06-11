@@ -3,3 +3,80 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.container{
+    background: linear-gradient(to left top,black, white, green);
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: 400;
+    display: flex;
+    flex-direction:column ;
+    width: 130%;
+    font-family:fantasy;
+    padding: 0%;
+    padding-left: 15% ; 
+}
+
+
+body{
+    background-color: rgba(104, 147, 39, 0.777);
+}
+
+.detail{
+    width: 70%;
+    font-family:fantasy;
+    padding: 2%;
+    padding-left: 3% ;
+    background-color: rgba(47, 48, 47, 0.777);
+
+}
+.carrito{
+    width: 100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3%;
+    background-color: rgba(0, 0, 0, 0.777);
+}
+.counter{
+    width: 100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3%;
+    background-color: rgba(0, 0, 0, 0.777);
+}
+
+.SinElementos{
+    width: 100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3%;
+    background-color: rgba(122, 122, 117, 0.777);
+}
+
+.film{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3%;
+    align-items:center;
+    background-color: rgba(0, 0, 0, 0.319);
+    width: 350px;
+    height: 400px;
+    opacity: 0,7;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.titulopelicula{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0%;
+    font-size: 120%;
+    display: block;
+    padding-left: 10% ; 
+    margin: auto;
+    border-radius: 10px;
+    align-content: center;
+    background-color: rgba(215, 218, 201, 0.91);
+}
